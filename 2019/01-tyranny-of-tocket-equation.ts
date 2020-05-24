@@ -129,3 +129,5 @@ const partTwo = (): number => {
 
 console.log(partOne());
 console.log(partTwo());
+
+export {};
