@@ -1,6 +1,10 @@
 const input = "356261-846303";
 const [min, max] = input.split("-").map((i) => ~~i);
 
+interface TestFunc {
+  (str: string): boolean;
+}
+
 const testDecrease = (str: string): boolean => {
   return str == str.split("").sort().join("");
 };
@@ -26,7 +30,7 @@ const testSameNotLarger = (str: string): boolean => {
   return Object.values(same).sort()[0] == 2;
 };
 
-const count = (tests: Function[]): number => {
+const count = (tests: TestFunc[]): number => {
   let count = 0;
 
   for (let i = min; i <= max; i++) {
