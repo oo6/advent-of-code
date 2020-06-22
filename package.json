@@ -1,11 +1,7 @@
 {
   "name": "advent-of-code",
   "license": "UNLICENSED",
-  "lint-staged": {
-    "*.go": "go fmt",
-    "*.exs": "mix format",
-    "*.ts": "deno fmt"
-  },
+
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
