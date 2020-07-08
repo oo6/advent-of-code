@@ -3,5 +3,12 @@
     "elixir": "cd $dir && elixir $fileName",
     "go": "cd $dir && go run $fileName",
     "typescript": "cd $dir && deno run --quiet --allow-read $fileName"
-  }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "search.exclude": {
+    ".yarn/**": true
+  },
+  "deno.enable": true
 }

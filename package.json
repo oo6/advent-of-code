@@ -1,7 +1,6 @@
 {
   "name": "advent-of-code",
   "license": "UNLICENSED",
-
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"

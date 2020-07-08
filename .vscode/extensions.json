@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "formulahendry.code-runner",
+    "golang.go",
+    "denoland.vscode-deno",
+    "jakebecker.elixir-ls"
+  ]
+}
