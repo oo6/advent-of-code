@@ -189,7 +189,7 @@ export const execute = (context: IContext): IContext => {
   }
 };
 
-export const init = (content: string, inputs: number[]): IContext => {
+export const init = (content: string, inputs: number[] = []): IContext => {
   const program = content.split(",")
     .reduce((acc, v, k) => acc.set(k, +v), new Map() as Map<number, number>);
 
