@@ -8,7 +8,8 @@
     "editor.defaultFormatter": "denoland.vscode-deno"
   },
   "search.exclude": {
-    ".yarn/**": true
+    ".yarn/**": true,
+    ".pnp.js": true
   },
   "deno.enable": true
 }
