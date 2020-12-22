@@ -1,6 +1,9 @@
 {
   "name": "advent-of-code",
   "license": "UNLICENSED",
+  "scripts": {
+    "badges": "node badges/update.js"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
