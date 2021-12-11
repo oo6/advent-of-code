@@ -54,7 +54,7 @@ defmodule AOC2021.Day09 do
     end
   end
 
-  defp init_grid(input) do
+  def init_grid(input) do
     grid =
       input
       |> String.split("\n", trim: true)
