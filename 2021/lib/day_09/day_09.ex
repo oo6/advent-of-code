@@ -20,23 +20,23 @@ defmodule AOC2021.Day09 do
 
     grid
     |> low_points(rows, cols)
-    |> Enum.map(&(&1 |> largest_basin(grid) |> map_size()))
+    |> Enum.map(&(&1 |> largest_basin(grid) |> MapSet.size()))
     |> Enum.sort(:desc)
     |> Enum.take(3)
     |> Enum.product()
   end
 
-  defp largest_basin({row, col} = point, grid, acc \\ %{}) do
-    if grid[point] && grid[point] < 9 && !acc[point] do
-      acc = Map.put(acc, point, grid[point])
+  defp largest_basin({row, col} = point, grid, set \\ MapSet.new()) do
+    if grid[point] && grid[point] < 9 && point not in set do
+      set = MapSet.put(set, point)
 
       Enum.reduce(
         [{row - 1, col}, {row + 1, col}, {row, col - 1}, {row, col + 1}],
-        acc,
+        set,
         &largest_basin(&1, grid, &2)
       )
     else
-      acc
+      set
     end
   end
 
