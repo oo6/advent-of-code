@@ -1,10 +1,5 @@
 defmodule AOC2022.Day01 do
-  def run() do
-    input = "input.txt" |> Path.expand(__DIR__) |> File.read!()
-
-    input |> part_one() |> IO.inspect()
-    input |> part_two() |> IO.inspect()
-  end
+  use AOC2022
 
   def part_one(input) do
     input
