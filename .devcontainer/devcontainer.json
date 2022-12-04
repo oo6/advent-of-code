@@ -1,0 +1,19 @@
+{
+  "name": "Elixir",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "zhuangtongfa.Material-theme",
+    "JakeBecker.elixir-ls",
+    "eamodio.gitlens"
+  ],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // This can be used to network with other containers or with the host.
+  // "forwardPorts": [],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "mix deps.get"
+  // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "vscode"
+}
